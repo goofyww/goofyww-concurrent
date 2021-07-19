@@ -10,4 +10,12 @@ public class SleepUtils {
         } catch (InterruptedException e) {
         }
     }
+
+    public static void milliSecond(long timout) {
+        try {
+            TimeUnit.MILLISECONDS.sleep(timout);
+        } catch (InterruptedException e) {
+        }
+    }
+
 }
