@@ -30,3 +30,21 @@ synchronized(对象){
     对象.notifyAll();
 }
 ```
+
+## Thread.join()方法源码
+* 当线程终止时，会调用线程自身的 `notifyAll()` 方法，会通知所有等待在线程对象上的线程
+-- 等待/通知 经典范式
+1）加锁
+2）循环
+3）处理逻辑
+
+```
+// 加锁当前线程对象
+public final synchronized void join() throws InterruptedException {
+    // 条件不满足，继续等待
+    while(isAlive){
+        wait(0)
+    }
+    // 条件符合，方法返回
+}
+```
