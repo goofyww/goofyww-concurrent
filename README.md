@@ -48,3 +48,10 @@ public final synchronized void join() throws InterruptedException {
     // 条件符合，方法返回
 }
 ```
+
+## 等待超时模式
+-- 等待超时模式是在 等待/通知范式 基础上增加超时控制，使得该模式想必原有范式更具有灵活性，
+因为即使方法执行时间过长，也不会"永久"阻塞调用者，而是会按照调用者的要求"按时"返回
+
+* 等待持续时间： REMAINING = T
+*    超时时间： FUTURE = NEW + T
