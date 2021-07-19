@@ -6,7 +6,7 @@ public class DefaultThreadPoolTest {
 
         DefaultThreadPool pool = new DefaultThreadPool();
         pool.execute(() -> {
-            System.out.println("hello world");
+            System.out.println(Thread.currentThread().getName() + " : hello world");
         });
 
     }
