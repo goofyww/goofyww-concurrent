@@ -1,4 +1,4 @@
-package cn.goofyww.concurrent.wn;
+package cn.goofyww.concurrent.pipe;
 
 import java.io.IOException;
 import java.io.PipedReader;
