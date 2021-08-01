@@ -1,4 +1,4 @@
-package cn.goofyww.concurrent.demo.base;
+package cn.goofyww.concurrent.base;
 
 /**
  * 多线程真的好吗？

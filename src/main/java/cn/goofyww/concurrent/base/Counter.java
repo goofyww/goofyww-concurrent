@@ -1,4 +1,4 @@
-package cn.goofyww.concurrent.demo.base;
+package cn.goofyww.concurrent.base;
 
 import java.util.ArrayList;
 import java.util.List;
