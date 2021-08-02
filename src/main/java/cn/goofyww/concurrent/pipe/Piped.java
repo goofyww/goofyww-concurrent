@@ -1,14 +1,20 @@
 package cn.goofyww.concurrent.pipe;
 
-import java.io.IOException;
-import java.io.PipedReader;
-import java.io.PipedWriter;
+import java.io.*;
 
 /**
  * 管道-输入/输出流
  */
 public class Piped {
 
+    /**
+     * 面向字节
+     * PipedOutputStream
+     * PipedInputStream
+     * 面向字符
+     * PipedWriter
+     * PipedReader
+     */
     public static void main(String[] args) throws IOException {
 
         PipedWriter out = new PipedWriter();
