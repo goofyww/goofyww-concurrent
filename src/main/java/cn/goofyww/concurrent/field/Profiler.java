@@ -11,12 +11,7 @@ import cn.goofyww.concurrent.util.SleepUtils;
  */
 public class Profiler {
 
-    private static final ThreadLocal<Long> TIME_THREADLOCAL = new ThreadLocal<Long>() {
-        @Override
-        protected Long initialValue() {
-            return System.currentTimeMillis();
-        }
-    };
+    private static final ThreadLocal<Long> TIME_THREADLOCAL = ThreadLocal.withInitial(System::currentTimeMillis);
 
     public static final void begin() {
         TIME_THREADLOCAL.set(System.currentTimeMillis());
