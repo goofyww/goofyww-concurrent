@@ -19,13 +19,10 @@ public class Counter {
         List<Thread> ts = new ArrayList<>(600);
         long start = System.currentTimeMillis();
         for (int i = 0; i < 100; i++) {
-            Thread t = new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    for (int i = 0; i < 10000; i++) {
-                        cas.count();
-                        cas.sageCount();
-                    }
+            Thread t = new Thread(() -> {
+                for (int i1 = 0; i1 < 10000; i1++) {
+                    cas.count();
+                    cas.sageCount();
                 }
             });
             ts.add(t);
