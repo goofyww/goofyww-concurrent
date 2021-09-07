@@ -10,6 +10,7 @@ import java.sql.Connection;
 public class ConnectionDriver {
 
     static class ConnectionHandler implements InvocationHandler {
+
         @Override
         public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
             if (method.getName().equals("commit")) {
@@ -17,6 +18,7 @@ public class ConnectionDriver {
             }
             return null;
         }
+
     }
 
     // 创建一个 Connection 的代理，在 commit 时休眠100毫秒
